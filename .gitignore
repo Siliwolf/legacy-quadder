@@ -1,1 +1,4 @@
 /target
+/resources/key.pem
+/resources/secret.txt
+/resources/id.txt

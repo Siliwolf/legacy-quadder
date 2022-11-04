@@ -1,15 +1,20 @@
-pub mod file;
 pub mod graphics;
 pub mod nodes;
 pub mod textbox;
 pub mod log;
 pub mod editor;
 
+pub mod file;
+pub mod github;
+pub mod cookies;
+
 pub const NODE_CIRCLE_RADIUS: f32 = 12.0;
 pub const MIN_ZOOM: f32 = 8.0;
 pub const MAX_ZOOM: f32 = 50.0;
 pub const ZOOM_DELTA: f32 = 2.0;
 pub const LINE_DISTANCE: f32 = 1.2;
+
+pub const TOKEN_KEY: &str = "github-token";
 
 #[derive(serde::Serialize, serde::Deserialize, Clone, Copy, PartialEq)]
 pub enum NodeType {

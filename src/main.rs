@@ -1,8 +1,7 @@
 use egui_macroquad::macroquad;
 use macroquad::prelude::*;
 use quadder::{
-    file::{appdata, get_data_store},
-    graphics,
+    graphics, github,
 };
 
 fn window_config() -> Conf {
@@ -25,12 +24,10 @@ fn window_config() -> Conf {
 
 #[macroquad::main(window_config())]
 async fn main() {
-    #[cfg(debug_assertions)]
-    std::env::set_current_dir(".\\test").unwrap();
-
     let mut state: graphics::State = graphics::State::new();
-    appdata();
-    get_data_store();
+
+    println!("{}", github::get_link().await);
+    println!("{}", github::get_token().await);
 
     loop {
         graphics::draw(&mut state).await;

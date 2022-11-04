@@ -1,2 +1,2 @@
 cargo build --target wasm32-unknown-unknown
-basic-http-server target/wasm32-unknown-unknown/debug
+basic-http-server -a 0.0.0.0:4000 web

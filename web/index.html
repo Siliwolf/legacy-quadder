@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Quadder</title>
+    <style>
+        html,
+        body,
+        canvas {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            background: rgb(56, 56, 56);
+            z-index: 0;
+            background-image: url(wolf.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="glcanvas" tabindex='1'></canvas>
+    <script src="./quadder.js"></script>
+    <script>load("./quadder.wasm");</script>
+</body>
+
+</html>
